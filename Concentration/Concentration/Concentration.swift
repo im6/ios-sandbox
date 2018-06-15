@@ -10,8 +10,29 @@ import Foundation
 
 class Concentration {
     var cards = [Card]()
+    var unmatchedIdx: Int?
+    
     func chooseCard(at index: Int){
-        self.cards[index].isFaceUp = !self.cards[index].isFaceUp
+        if cards[index].isMatched {
+            print("no need to click again")
+        } else {
+            if let umId = unmatchedIdx, umId != index {
+                if cards[umId].id == cards[index].id {
+                    cards[umId].isMatched = true
+                    cards[index].isMatched = true
+                }
+                cards[index].isFaceUp = true
+                unmatchedIdx = nil
+                
+            } else {
+                for v in cards.indices{
+                    cards[v].isFaceUp = false
+                }
+                cards[index].isFaceUp = true
+                unmatchedIdx = index
+
+            }
+        }
     }
     
     init(numberOfPairInCards: Int){
