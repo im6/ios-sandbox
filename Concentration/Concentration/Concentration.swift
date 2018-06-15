@@ -10,7 +10,27 @@ import Foundation
 
 class Concentration {
     var cards = [Card]()
-    var unmatchedIdx: Int?
+    var unmatchedIdx: Int? {
+        get {
+            var matchIndex: Int?
+            for idx in cards.indices{
+                if cards[idx].isFaceUp {
+                    if matchIndex == nil {
+                        matchIndex = idx
+                    } else {
+                        return nil
+                    }
+                }
+            }
+            
+            return matchIndex
+        }
+        set {
+            for idx in cards.indices{
+                cards[idx].isFaceUp = (idx == newValue)
+            }
+        }
+    }
     
     func chooseCard(at index: Int){
         if cards[index].isMatched {
@@ -22,13 +42,8 @@ class Concentration {
                     cards[index].isMatched = true
                 }
                 cards[index].isFaceUp = true
-                unmatchedIdx = nil
                 
             } else {
-                for v in cards.indices{
-                    cards[v].isFaceUp = false
-                }
-                cards[index].isFaceUp = true
                 unmatchedIdx = index
 
             }
