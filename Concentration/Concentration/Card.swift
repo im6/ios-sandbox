@@ -5,8 +5,8 @@ struct Card {
     var isFaceUp: Bool = false
     var isMatched: Bool = false
     
-    static var idFactory = 0
-    static func generateId() -> Int {
+    private static var idFactory = 0
+    private static func generateId() -> Int {
         idFactory += 1
         return idFactory
     }

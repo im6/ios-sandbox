@@ -2,15 +2,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var game = Concentration(numberOfPairInCards: 2)
-    var steps = 0 {
+    private var game = Concentration(numberOfPairInCards: 2)
+    private(set) var steps = 0 {
         didSet {
             self.stepLabel.text = "\(steps)"
         }
     }
 
-    @IBOutlet weak var stepLabel: UILabel!
-    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet private weak var stepLabel: UILabel!
+    @IBOutlet private var cardButtons: [UIButton]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func cardClick(_ sender: UIButton) {
+    @IBAction private func cardClick(_ sender: UIButton) {
         steps += 1
         if let cardInd = cardButtons.index(of: sender) {
             game.chooseCard(at: cardInd)
@@ -31,10 +31,10 @@ class ViewController: UIViewController {
         
     }
     
-    var emojisSource = ["😈", "👽", "🐋", "🐕", "🌵", "🐬", "🐝"]
-    var emoji = [Int:String]()
+    private var emojisSource = ["😈", "👽", "🐋", "🐕", "🌵", "🐬", "🐝"]
+    private var emoji = [Int:String]()
     
-    func getEmoji(for cardId: Int) -> String {
+    private func getEmoji(for cardId: Int) -> String {
         if emoji[cardId] == nil {
             let randNum = Int(arc4random_uniform(UInt32(emojisSource.count)))
             emoji[cardId] = emojisSource[randNum]
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     
     }
     
-    func renderView(){
+    private func renderView(){
         for ind in self.cardButtons.indices{
             let btn = self.cardButtons[ind]
             let card = game.cards[ind]
