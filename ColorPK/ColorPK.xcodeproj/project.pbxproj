@@ -14,6 +14,7 @@
 		38F91D3820D203C900589E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F91D3620D203C900589E86 /* LaunchScreen.storyboard */; };
 		38F91D4320D203C900589E86 /* ColorPKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F91D4220D203C900589E86 /* ColorPKTests.swift */; };
 		38F91D4E20D203C900589E86 /* ColorPKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F91D4D20D203C900589E86 /* ColorPKUITests.swift */; };
+		38F91D6120D2218B00589E86 /* VPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F91D6020D2218B00589E86 /* VPColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		38F91D4920D203C900589E86 /* ColorPKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F91D4D20D203C900589E86 /* ColorPKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPKUITests.swift; sourceTree = "<group>"; };
 		38F91D4F20D203C900589E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38F91D6020D2218B00589E86 /* VPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VPColor.swift; path = Models/VPColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		38F91D2C20D203C900589E86 /* ColorPK */ = {
 			isa = PBXGroup;
 			children = (
+				38F91D5D20D2213200589E86 /* Models */,
 				38F91D2D20D203C900589E86 /* AppDelegate.swift */,
 				38F91D2F20D203C900589E86 /* ViewController.swift */,
 				38F91D3120D203C900589E86 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				38F91D4F20D203C900589E86 /* Info.plist */,
 			);
 			path = ColorPKUITests;
+			sourceTree = "<group>";
+		};
+		38F91D5D20D2213200589E86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38F91D6020D2218B00589E86 /* VPColor.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F91D6120D2218B00589E86 /* VPColor.swift in Sources */,
 				38F91D3020D203C900589E86 /* ViewController.swift in Sources */,
 				38F91D2E20D203C900589E86 /* AppDelegate.swift in Sources */,
 			);
