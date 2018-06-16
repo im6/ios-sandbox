@@ -12,18 +12,8 @@ class Concentration {
     private(set ) var cards = [Card]()
     private var unmatchedIdx: Int? {
         get {
-            var matchIndex: Int?
-            for idx in cards.indices{
-                if cards[idx].isFaceUp {
-                    if matchIndex == nil {
-                        matchIndex = idx
-                    } else {
-                        return nil
-                    }
-                }
-            }
-            
-            return matchIndex
+            let mid = cards.indices.filter {cards[$0].isFaceUp}
+            return mid.count == 1 ? mid.first : nil
         }
         set {
             for idx in cards.indices{
