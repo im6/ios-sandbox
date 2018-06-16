@@ -32,14 +32,14 @@ class ViewController: UIViewController {
     }
     
     private var emojisSource = ["😈", "👽", "🐋", "🐕", "🌵", "🐬", "🐝"]
-    private var emoji = [Int:String]()
+    private var emoji = [Card:String]()
     
-    private func getEmoji(for cardId: Int) -> String {
-        if emoji[cardId] == nil {
+    private func getEmoji(for card: Card) -> String {
+        if emoji[card] == nil {
             let randNum = Int(arc4random_uniform(UInt32(emojisSource.count)))
-            emoji[cardId] = emojisSource[randNum]
+            emoji[card] = emojisSource[randNum]
         }
-        return emoji[cardId] ?? "?"
+        return emoji[card] ?? "?"
     
     }
     
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             let btn = self.cardButtons[ind]
             let card = game.cards[ind]
             if card.isFaceUp {
-                btn.setTitle(getEmoji(for: card.id), for: UIControlState.normal)
+                btn.setTitle(getEmoji(for: card), for: UIControlState.normal)
                 btn.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
             } else {
                 btn.setTitle("", for: UIControlState.normal)

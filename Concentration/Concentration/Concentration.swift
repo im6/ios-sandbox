@@ -38,7 +38,7 @@ class Concentration {
             print("no need to click again")
         } else {
             if let umId = unmatchedIdx, umId != index {
-                if cards[umId].id == cards[index].id {
+                if cards[umId] == cards[index] {
                     cards[umId].isMatched = true
                     cards[index].isMatched = true
                 }
