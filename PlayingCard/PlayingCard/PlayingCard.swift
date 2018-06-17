@@ -21,6 +21,7 @@ struct PlayingCard: CustomStringConvertible {
         case club = "♣️"
         case heart = "♥️"
         
+        
         static let all = [Suit.spade, .club, .heart, .diamond]
         var description: String {
             return rawValue
@@ -46,6 +47,16 @@ struct PlayingCard: CustomStringConvertible {
                 case .ace: return "A"
                 case .face(let face): return "\(face)"
                 case .numeric(let num): return "\(num)"
+            }
+        }
+        var order: Int {
+            switch self{
+                case .ace: return 1
+                case .numeric(let num): return num
+                case .face(let kind) where kind == "J": return 11
+                case .face(let kind) where kind == "Q": return 12
+                case .face(let kind) where kind == "K": return 13
+                default: return 0
             }
         }
     }
