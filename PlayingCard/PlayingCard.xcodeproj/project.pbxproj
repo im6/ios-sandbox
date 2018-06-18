@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384F7B2120D7C8B800CA7DA1 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F7B2020D7C8B800CA7DA1 /* PlayingCardView.swift */; };
 		38BB991E20D62F0A00CF0785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BB991D20D62F0A00CF0785 /* AppDelegate.swift */; };
 		38BB992020D62F0A00CF0785 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BB991F20D62F0A00CF0785 /* ViewController.swift */; };
 		38BB992320D62F0A00CF0785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BB992120D62F0A00CF0785 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		384F7B2020D7C8B800CA7DA1 /* PlayingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 		38BB991A20D62F0A00CF0785 /* PlayingCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BB991D20D62F0A00CF0785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BB991F20D62F0A00CF0785 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				38BB992920D62F0A00CF0785 /* Info.plist */,
 				38BB992F20D62F2200CF0785 /* PlayingCard.swift */,
 				38BB993120D6315B00CF0785 /* PlayingCardDeck.swift */,
+				384F7B2020D7C8B800CA7DA1 /* PlayingCardView.swift */,
 			);
 			path = PlayingCard;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				38BB992020D62F0A00CF0785 /* ViewController.swift in Sources */,
 				38BB993220D6315B00CF0785 /* PlayingCardDeck.swift in Sources */,
 				38BB993020D62F2200CF0785 /* PlayingCard.swift in Sources */,
+				384F7B2120D7C8B800CA7DA1 /* PlayingCardView.swift in Sources */,
 				38BB991E20D62F0A00CF0785 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +311,7 @@
 				38BB992E20D62F0A00CF0785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

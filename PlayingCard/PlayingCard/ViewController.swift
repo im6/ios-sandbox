@@ -15,12 +15,12 @@ class ViewController: UIViewController {
         
         
         var deck = PlayingCardDeck.init()
-        for _ in 1...10{
-            if let card = deck.draw(){
-                print(card)
-            }
-            
-        }
+//        for _ in 1...10{
+//            if let card = deck.draw(){
+//                print(card)
+//            }
+//            
+//        }
     }
 
 
