@@ -22,9 +22,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let a = VPColor.getColorList()
+        let a = VPColor.getDummyColorList()
         print("color number: \(a.count)")
-        print("abc")
     }
 
     override func didReceiveMemoryWarning() {
