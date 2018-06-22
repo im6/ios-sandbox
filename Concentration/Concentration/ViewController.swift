@@ -1,8 +1,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    private var game = Concentration(numberOfPairInCards: 2)
+class ConcentrationViewController: UIViewController {
+    private var game = Concentration(numberOfPairInCards: 3)
     private(set) var steps = 0 {
         didSet {
             self.stepLabel.text = "\(steps)"
