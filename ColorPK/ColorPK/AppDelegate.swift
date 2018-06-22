@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ColorPK
 //
-//  Created by Zijian Guo on 6/14/18.
+//  Created by Zijian Guo on 6/23/18.
 //  Copyright © 2018 Zijian Guo. All rights reserved.
 //
 
@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        print("enter app...")
         return true
     }
 
