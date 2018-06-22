@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387EDBB920DD2A5300ADF318 /* ConcentrationThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBB820DD2A5300ADF318 /* ConcentrationThemeViewController.swift */; };
 		38A12F3820D355CD00FB3294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A12F3720D355CD00FB3294 /* AppDelegate.swift */; };
 		38A12F3A20D355CD00FB3294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A12F3920D355CD00FB3294 /* ViewController.swift */; };
 		38A12F3D20D355CD00FB3294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A12F3B20D355CD00FB3294 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		387EDBB820DD2A5300ADF318 /* ConcentrationThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeViewController.swift; sourceTree = "<group>"; };
 		38A12F3420D355CD00FB3294 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A12F3720D355CD00FB3294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A12F3920D355CD00FB3294 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				38A12F4320D355CD00FB3294 /* Info.plist */,
 				38A12F6520D36D6900FB3294 /* Card.swift */,
 				38A12F6720D36DD400FB3294 /* Concentration.swift */,
+				387EDBB820DD2A5300ADF318 /* ConcentrationThemeViewController.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387EDBB920DD2A5300ADF318 /* ConcentrationThemeViewController.swift in Sources */,
 				38A12F3A20D355CD00FB3294 /* ViewController.swift in Sources */,
 				38A12F6820D36DD400FB3294 /* Concentration.swift in Sources */,
 				38A12F6620D36D6900FB3294 /* Card.swift in Sources */,
@@ -513,6 +517,7 @@
 				38A12F5E20D355CD00FB3294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38A12F5F20D355CD00FB3294 /* Build configuration list for PBXNativeTarget "ConcentrationTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				38A12F6120D355CD00FB3294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38A12F6220D355CD00FB3294 /* Build configuration list for PBXNativeTarget "ConcentrationUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +535,7 @@
 				38A12F6420D355CD00FB3294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
