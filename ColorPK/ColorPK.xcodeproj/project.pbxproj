@@ -307,6 +307,7 @@
 				387EDBD920DD5AE100ADF318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
