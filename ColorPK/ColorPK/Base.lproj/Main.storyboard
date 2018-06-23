@@ -94,7 +94,7 @@
         <!--New-->
         <scene sceneID="953-IL-Tx4">
             <objects>
-                <viewController id="XG1-yg-7mC" sceneMemberID="viewController">
+                <viewController id="XG1-yg-7mC" customClass="NewColorViewController" customModule="ColorPK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yeb-E6-QKo"/>
                         <viewControllerLayoutGuide type="bottom" id="WtF-b8-0dk"/>
@@ -116,6 +116,9 @@
                     <tabBarItem key="tabBarItem" title="New" image="plus" id="rnw-5d-7ho">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="testLabel" destination="Z5g-QV-PPN" id="Xq6-Bz-X97"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KF-Xe-ahm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

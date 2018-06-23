@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380FFD0F20DE9732000B0CED /* NewColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FFD0E20DE9732000B0CED /* NewColorViewController.swift */; };
 		387EDBC720DD5AE100ADF318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBC620DD5AE100ADF318 /* AppDelegate.swift */; };
 		387EDBC920DD5AE100ADF318 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBC820DD5AE100ADF318 /* FirstViewController.swift */; };
 		387EDBCB20DD5AE100ADF318 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBCA20DD5AE100ADF318 /* SecondViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		380FFD0E20DE9732000B0CED /* NewColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewColorViewController.swift; sourceTree = "<group>"; };
 		387EDBC320DD5AE100ADF318 /* ColorPK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387EDBC620DD5AE100ADF318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		387EDBC820DD5AE100ADF318 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				387EDBCF20DD5AE100ADF318 /* Assets.xcassets */,
 				387EDBD120DD5AE100ADF318 /* LaunchScreen.storyboard */,
 				387EDBD420DD5AE100ADF318 /* Info.plist */,
+				380FFD0E20DE9732000B0CED /* NewColorViewController.swift */,
 			);
 			path = ColorPK;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				387EDBCB20DD5AE100ADF318 /* SecondViewController.swift in Sources */,
 				387EDBDB20DD5B2C00ADF318 /* VPColor.swift in Sources */,
 				387EDBC720DD5AE100ADF318 /* AppDelegate.swift in Sources */,
+				380FFD0F20DE9732000B0CED /* NewColorViewController.swift in Sources */,
 				387EDBC920DD5AE100ADF318 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
