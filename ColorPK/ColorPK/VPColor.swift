@@ -1,6 +1,6 @@
 import Foundation
 
-class VPColor
+struct VPColor
 {
     let id: Int
     let color: [String]
