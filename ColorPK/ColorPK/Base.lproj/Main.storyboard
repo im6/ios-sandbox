@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1940" y="-340.47976011994007"/>
         </scene>
-        <!--View Controller-->
+        <!--One Color View Controller-->
         <scene sceneID="bPg-JE-nHQ">
             <objects>
-                <viewController id="5JQ-bL-3YR" sceneMemberID="viewController">
+                <viewController id="5JQ-bL-3YR" customClass="OneColorViewController" customModule="ColorPK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IOo-a0-rAK"/>
                         <viewControllerLayoutGuide type="bottom" id="Ojh-T7-Flq"/>
@@ -79,6 +79,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="testLabel" destination="ZAg-UP-Yau" id="S5h-JX-hwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdY-BT-Y7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

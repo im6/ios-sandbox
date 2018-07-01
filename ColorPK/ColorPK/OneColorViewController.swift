@@ -10,11 +10,19 @@ import UIKit
 
 class OneColorViewController: UIViewController {
 
+    var currentColor: VPColor!
+    @IBOutlet weak var testLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("one color loaded")
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("selected id: \(currentColor.id)")
+        testLabel.text = String(currentColor.id)
     }
 
     override func didReceiveMemoryWarning() {

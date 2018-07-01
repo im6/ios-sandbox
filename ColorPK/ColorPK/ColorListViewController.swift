@@ -27,7 +27,12 @@ class ColorListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        print("preparing")
+        if segue.identifier == "showOneColor" {
+            let destCtr = segue.destination
+            if let oneColorCtr = destCtr as? OneColorViewController {
+                oneColorCtr.currentColor = colorList[2]
+            }
+        }
     }
 
 }
