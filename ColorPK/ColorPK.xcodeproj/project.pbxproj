@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		380FFD0F20DE9732000B0CED /* NewColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FFD0E20DE9732000B0CED /* NewColorViewController.swift */; };
-		384CDA6520E9035500DA0210 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384CDA6420E9035500DA0210 /* ColorListViewController.swift */; };
 		384CDA6720E903A500DA0210 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384CDA6620E903A500DA0210 /* ProfileViewController.swift */; };
 		384CDA6920E9079900DA0210 /* OneColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384CDA6820E9079900DA0210 /* OneColorViewController.swift */; };
 		387EDBC720DD5AE100ADF318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBC620DD5AE100ADF318 /* AppDelegate.swift */; };
@@ -16,11 +15,11 @@
 		387EDBD020DD5AE100ADF318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387EDBCF20DD5AE100ADF318 /* Assets.xcassets */; };
 		387EDBD320DD5AE100ADF318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387EDBD120DD5AE100ADF318 /* LaunchScreen.storyboard */; };
 		387EDBDB20DD5B2C00ADF318 /* VPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBDA20DD5B2C00ADF318 /* VPColor.swift */; };
+		38C9B0CA20EA6D47009AC0B3 /* ColorListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C9B0C920EA6D47009AC0B3 /* ColorListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		380FFD0E20DE9732000B0CED /* NewColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewColorViewController.swift; sourceTree = "<group>"; };
-		384CDA6420E9035500DA0210 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
 		384CDA6620E903A500DA0210 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		384CDA6820E9079900DA0210 /* OneColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneColorViewController.swift; sourceTree = "<group>"; };
 		387EDBC320DD5AE100ADF318 /* ColorPK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +29,7 @@
 		387EDBD220DD5AE100ADF318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		387EDBD420DD5AE100ADF318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387EDBDA20DD5B2C00ADF318 /* VPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPColor.swift; sourceTree = "<group>"; };
+		38C9B0C920EA6D47009AC0B3 /* ColorListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +68,10 @@
 				387EDBCF20DD5AE100ADF318 /* Assets.xcassets */,
 				387EDBD120DD5AE100ADF318 /* LaunchScreen.storyboard */,
 				387EDBD420DD5AE100ADF318 /* Info.plist */,
-				384CDA6420E9035500DA0210 /* ColorListViewController.swift */,
 				380FFD0E20DE9732000B0CED /* NewColorViewController.swift */,
 				384CDA6620E903A500DA0210 /* ProfileViewController.swift */,
 				384CDA6820E9079900DA0210 /* OneColorViewController.swift */,
+				38C9B0C920EA6D47009AC0B3 /* ColorListTableViewController.swift */,
 			);
 			path = ColorPK;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				387EDBC720DD5AE100ADF318 /* AppDelegate.swift in Sources */,
 				380FFD0F20DE9732000B0CED /* NewColorViewController.swift in Sources */,
 				384CDA6920E9079900DA0210 /* OneColorViewController.swift in Sources */,
-				384CDA6520E9035500DA0210 /* ColorListViewController.swift in Sources */,
+				38C9B0CA20EA6D47009AC0B3 /* ColorListTableViewController.swift in Sources */,
 				384CDA6720E903A500DA0210 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
