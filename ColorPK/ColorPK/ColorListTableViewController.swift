@@ -10,31 +10,53 @@ import UIKit
 
 class ColorListTableViewController: UITableViewController {
 
-    private var colorList: [VPColor] = VPColor.getDummyColorList()
+    private var colorList = [VPColor]()
+    
+    private func loadColors() {
+        let backgroundQ = DispatchQueue.global(qos: .userInitiated)
+        backgroundQ.async { [weak self] in
+            self?.colorList = VPColor.getDummyColorList()
+            
+            let json: [String: Any] = ["_csrf": "9ovrfaV7-r-bTWhqbXZfK6yn5K0kS5_pAOoI"]
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+            let url = URL(string: "http://react.colorpk.com/api/initColorList")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription ?? "No data")
+                    return
+                }
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [String: Any] {
+                    print(responseJSON)
+                }
+            }
+            
+            task.resume()
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadColors()
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return colorList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "oneColor", for: indexPath)
+        let color = colorList[indexPath.row]
+        cell.textLabel?.text = "id: \(color.id)"
+        cell.detailTextLabel?.text = "\(color.color)"
 
         // Configure the cell...
         return cell
