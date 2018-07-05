@@ -17,11 +17,14 @@ class ColorListTableViewController: UITableViewController {
         backgroundQ.async { [weak self] in
             self?.colorList = VPColor.getDummyColorList()
             
-            let json: [String: Any] = ["_csrf": "9ovrfaV7-r-bTWhqbXZfK6yn5K0kS5_pAOoI"]
+            let json: [String: Any] = ["_csrf": "uNmjCwXz-ztEL6Anx7zjSUuRq2R21oDGoJDA"]
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
-            let url = URL(string: "http://react.colorpk.com/api/initColorList")!
+            let url = URL(string: "http://localhost:3000/api/initColorList")!
+            
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
+            //request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = jsonData
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -30,8 +33,28 @@ class ColorListTableViewController: UITableViewController {
                     return
                 }
                 let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                
+                print("parse json")
                 if let responseJSON = responseJSON as? [String: Any] {
-                    print(responseJSON)
+                    if let results = responseJSON["result"] as? [Any] {
+                        for oneColor in results {
+                            let oneColor1 = oneColor as! [String: Any]
+                            if let newId = oneColor1["id"],
+                                let newColor = oneColor1["color"],
+                                let newIsLiked = oneColor1["liked"],
+                                let newLikeNum = oneColor1["like"] {
+                                let newColor = VPColor(id: newId as! Int,
+                                                       color: newColor as! String,
+                                                       isLiked: (newIsLiked as! Int) == 1,
+                                                       likeNum: newLikeNum as! Int)
+                                self?.colorList.append(newColor)
+                                print(self!.colorList.count)
+                            } else {
+                                print("error parsing colors json response.")
+                            }
+                        }
+                    }
+                    
                 }
             }
             
