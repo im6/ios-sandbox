@@ -1,10 +1,3 @@
-//
-//  ColorListTableViewController.swift
-//  ColorPK
-//
-//  Created by Zijian Guo on 7/2/18.
-//  Copyright © 2018 Zijian Guo. All rights reserved.
-//
 
 import UIKit
 
@@ -15,8 +8,6 @@ class ColorListTableViewController: UITableViewController {
     private func loadColors() {
         let backgroundQ = DispatchQueue.global(qos: .userInitiated)
         backgroundQ.async { [weak self] in
-            self?.colorList = VPColor.getDummyColorList()
-            
             let json: [String: Any] = ["_csrf": "uNmjCwXz-ztEL6Anx7zjSUuRq2R21oDGoJDA"]
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
             let url = URL(string: "http://localhost:3000/api/initColorList")!
@@ -48,7 +39,9 @@ class ColorListTableViewController: UITableViewController {
                                                        isLiked: (newIsLiked as! Int) == 1,
                                                        likeNum: newLikeNum as! Int)
                                 self?.colorList.append(newColor)
-                                print(self!.colorList.count)
+                                DispatchQueue.main.async {
+                                    self?.tableView?.reloadData()
+                                }
                             } else {
                                 print("error parsing colors json response.")
                             }
