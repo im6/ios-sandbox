@@ -7,7 +7,7 @@ class ColorListTableViewController: UITableViewController {
     
     private func loadColors() {
         let backgroundQ = DispatchQueue.global(qos: .userInitiated)
-        colorList = VPColor.getDummyColorList()
+        //colorList = VPColor.getDummyColorList()
         backgroundQ.async { [weak self] in
             let json: [String: Any] = ["_csrf": "uNmjCwXz-ztEL6Anx7zjSUuRq2R21oDGoJDA"]
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
