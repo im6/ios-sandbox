@@ -10,6 +10,8 @@
 		380FFD0F20DE9732000B0CED /* NewColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380FFD0E20DE9732000B0CED /* NewColorViewController.swift */; };
 		384CDA6720E903A500DA0210 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384CDA6620E903A500DA0210 /* ProfileViewController.swift */; };
 		384CDA6920E9079900DA0210 /* OneColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384CDA6820E9079900DA0210 /* OneColorViewController.swift */; };
+		386889D220F8DDD700249E22 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386889D120F8DDD700249E22 /* ColorTableViewController.swift */; };
+		386889D420F8DE7200249E22 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386889D320F8DE7200249E22 /* ColorTableViewCell.swift */; };
 		387EDBC720DD5AE100ADF318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBC620DD5AE100ADF318 /* AppDelegate.swift */; };
 		387EDBCE20DD5AE100ADF318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387EDBCC20DD5AE100ADF318 /* Main.storyboard */; };
 		387EDBD020DD5AE100ADF318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387EDBCF20DD5AE100ADF318 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		380FFD0E20DE9732000B0CED /* NewColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewColorViewController.swift; sourceTree = "<group>"; };
 		384CDA6620E903A500DA0210 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		384CDA6820E9079900DA0210 /* OneColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneColorViewController.swift; sourceTree = "<group>"; };
+		386889D120F8DDD700249E22 /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		386889D320F8DE7200249E22 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		387EDBC320DD5AE100ADF318 /* ColorPK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387EDBC620DD5AE100ADF318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		387EDBCD20DD5AE100ADF318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				384CDA6620E903A500DA0210 /* ProfileViewController.swift */,
 				384CDA6820E9079900DA0210 /* OneColorViewController.swift */,
 				38C9B0C920EA6D47009AC0B3 /* ColorListTableViewController.swift */,
+				386889D120F8DDD700249E22 /* ColorTableViewController.swift */,
+				386889D320F8DE7200249E22 /* ColorTableViewCell.swift */,
 			);
 			path = ColorPK;
 			sourceTree = "<group>";
@@ -156,8 +162,10 @@
 				380FFD0F20DE9732000B0CED /* NewColorViewController.swift in Sources */,
 				38E6D18E20ED006100A254E0 /* ColorPK.swift in Sources */,
 				384CDA6920E9079900DA0210 /* OneColorViewController.swift in Sources */,
+				386889D420F8DE7200249E22 /* ColorTableViewCell.swift in Sources */,
 				38C9B0CA20EA6D47009AC0B3 /* ColorListTableViewController.swift in Sources */,
 				384CDA6720E903A500DA0210 /* ProfileViewController.swift in Sources */,
+				386889D220F8DDD700249E22 /* ColorTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
