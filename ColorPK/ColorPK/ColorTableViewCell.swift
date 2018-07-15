@@ -26,20 +26,22 @@ class ColorTableViewCell: UITableViewCell {
         } else {
             return nil
         }
-    
     }
     
     private func updateUI() {
         if let currentColor = color {
-            let btnHeart = currentColor.isLiked ? "👍" : "👍"
+            let btnHeart = currentColor.isLiked ? "♥️" : "♥️"
             let btnText = "\(btnHeart) \(currentColor.likeNum)"
             likeButton.setTitle(btnText, for: UIControlState.normal)
             colorButtons[0].backgroundColor = convertStringToColor(str: currentColor.color[0])
             colorButtons[1].backgroundColor = convertStringToColor(str: currentColor.color[1])
             colorButtons[2].backgroundColor = convertStringToColor(str: currentColor.color[2])
             colorButtons[3].backgroundColor = convertStringToColor(str: currentColor.color[3])
-            
         }
+        
+//        let bgColorView = UIView()
+//        bgColorView.backgroundColor = nil
+//        self.selectedBackgroundView = bgColorView
         
     }
 }

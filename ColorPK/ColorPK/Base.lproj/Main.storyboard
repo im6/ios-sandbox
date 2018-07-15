@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,40 +107,50 @@
         <scene sceneID="Ejw-Ua-1jk">
             <objects>
                 <tableViewController id="eK2-Vo-Q4J" customClass="ColorTableViewController" customModule="ColorPK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="NaO-4D-Eeg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="NaO-4D-Eeg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="colorCell" rowHeight="60" id="GMC-Uh-pPg" customClass="ColorTableViewCell" customModule="ColorPK" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="colorCell" rowHeight="55" id="GMC-Uh-pPg" customClass="ColorTableViewCell" customModule="ColorPK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMC-Uh-pPg" id="njr-g0-str">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-QW-l8C">
-                                            <rect key="frame" x="28" y="14" width="43" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me4-Qn-8g4">
-                                            <rect key="frame" x="71" y="14" width="43" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAW-6Z-d4p">
-                                            <rect key="frame" x="114" y="14" width="43" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-w6-IhN">
-                                            <rect key="frame" x="157" y="14" width="43" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d98-cV-ycU">
+                                            <rect key="frame" x="18" y="8" width="249" height="38.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-QW-l8C">
+                                                    <rect key="frame" x="0.0" y="4.5" width="62.5" height="30"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me4-Qn-8g4">
+                                                    <rect key="frame" x="62.5" y="4.5" width="62" height="30"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAW-6Z-d4p">
+                                                    <rect key="frame" x="124.5" y="4.5" width="62.5" height="30"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-w6-IhN">
+                                                    <rect key="frame" x="187" y="4.5" width="62" height="30"/>
+                                                    <connections>
+                                                        <segue destination="S0I-Jg-kLL" kind="show" id="G00-Qw-7A5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6w-kU-33J">
-                                            <rect key="frame" x="214" y="14" width="73" height="27"/>
+                                            <rect key="frame" x="284" y="12" width="72" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="❤️♡"/>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="d98-cV-ycU" secondAttribute="bottom" id="1TL-1y-p0t"/>
+                                        <constraint firstItem="d98-cV-ycU" firstAttribute="leading" secondItem="njr-g0-str" secondAttribute="leadingMargin" constant="10" id="7OL-GZ-tCX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="d98-cV-ycU" secondAttribute="trailing" constant="100" id="aE6-Gb-RCw"/>
+                                        <constraint firstItem="d98-cV-ycU" firstAttribute="top" secondItem="njr-g0-str" secondAttribute="topMargin" id="qnv-2Q-1si"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="likeButton" destination="M6w-kU-33J" id="6bV-Mq-nSF"/>
@@ -147,7 +158,6 @@
                                     <outletCollection property="colorButtons" destination="me4-Qn-8g4" collectionClass="NSMutableArray" id="UXf-Q3-cLG"/>
                                     <outletCollection property="colorButtons" destination="iAW-6Z-d4p" collectionClass="NSMutableArray" id="Oj1-gl-e5L"/>
                                     <outletCollection property="colorButtons" destination="ssu-w6-IhN" collectionClass="NSMutableArray" id="ubJ-j4-jA1"/>
-                                    <segue destination="S0I-Jg-kLL" kind="show" id="O9u-HH-X6W"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
