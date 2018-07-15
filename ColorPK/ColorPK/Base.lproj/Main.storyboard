@@ -135,22 +135,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6w-kU-33J">
-                                            <rect key="frame" x="214" y="14" width="43" height="27"/>
+                                            <rect key="frame" x="214" y="14" width="73" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="❤️♡"/>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpJ-VO-NXi">
-                                            <rect key="frame" x="273" y="14" width="51" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="likeButton" destination="M6w-kU-33J" id="ZxO-dp-bBe"/>
-                                    <outlet property="likedNumLabel" destination="vpJ-VO-NXi" id="sHG-v7-alh"/>
+                                    <outlet property="likeButton" destination="M6w-kU-33J" id="6bV-Mq-nSF"/>
                                     <outletCollection property="colorButtons" destination="gFc-QW-l8C" collectionClass="NSMutableArray" id="rrD-FR-ycS"/>
                                     <outletCollection property="colorButtons" destination="me4-Qn-8g4" collectionClass="NSMutableArray" id="UXf-Q3-cLG"/>
                                     <outletCollection property="colorButtons" destination="iAW-6Z-d4p" collectionClass="NSMutableArray" id="Oj1-gl-e5L"/>
