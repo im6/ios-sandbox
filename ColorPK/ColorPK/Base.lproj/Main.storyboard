@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1872.8" y="-242.42878560719643"/>
         </scene>
-        <!--View Controller-->
+        <!--Color Detail View Controller-->
         <scene sceneID="6Pa-eW-1WB">
             <objects>
-                <viewController id="S0I-Jg-kLL" sceneMemberID="viewController">
+                <viewController id="S0I-Jg-kLL" customClass="ColorDetailViewController" customModule="ColorPK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2KJ-9j-Aaa"/>
                         <viewControllerLayoutGuide type="bottom" id="q6X-RT-N2B"/>
@@ -184,15 +184,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoU-nH-cMl">
-                                <rect key="frame" x="112" y="305" width="150" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q13-nI-9SL" customClass="ColorCanvasView" customModule="ColorPK" customModuleProvider="target">
+                                <rect key="frame" x="32" y="91" width="310" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q13-nI-9SL" firstAttribute="centerX" secondItem="N5r-eX-xHo" secondAttribute="centerX" id="me3-cc-byz"/>
+                            <constraint firstItem="q13-nI-9SL" firstAttribute="top" secondItem="2KJ-9j-Aaa" secondAttribute="bottom" constant="27" id="oTN-Cb-gZf"/>
+                            <constraint firstItem="q6X-RT-N2B" firstAttribute="top" secondItem="q13-nI-9SL" secondAttribute="bottom" constant="136" id="v5a-z0-qFD"/>
+                            <constraint firstItem="q13-nI-9SL" firstAttribute="leading" secondItem="N5r-eX-xHo" secondAttribute="leadingMargin" constant="16" id="xOP-bN-DZV"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nma-y9-ATI" userLabel="First Responder" sceneMemberID="firstResponder"/>

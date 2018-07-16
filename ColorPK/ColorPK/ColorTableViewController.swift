@@ -137,7 +137,7 @@ class ColorTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "showOneColor" {
             let destCtr = segue.destination
-            if let oneColorCtr = destCtr as? OneColorViewController {
+            if let oneColorCtr = destCtr as? ColorDetailViewController {
                 oneColorCtr.currentColor = colorList[2]
             }
         }
