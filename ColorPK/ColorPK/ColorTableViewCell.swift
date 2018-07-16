@@ -30,7 +30,7 @@ class ColorTableViewCell: UITableViewCell {
     
     private func updateUI() {
         if let currentColor = color {
-            let btnHeart = currentColor.isLiked ? "♥️" : "♥️"
+            let btnHeart = currentColor.isLiked ? "♥️" : "♡"
             let btnText = "\(btnHeart) \(currentColor.likeNum)"
             likeButton.setTitle(btnText, for: UIControlState.normal)
             colorButtons[0].backgroundColor = convertStringToColor(str: currentColor.color[0])
