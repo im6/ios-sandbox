@@ -2,32 +2,67 @@ import UIKit
 
 class ColorCanvasView: UIView {
     override func draw(_ rect: CGRect) {
-
-        let rectMargin:CGFloat = 20
-        let rectWidth:CGFloat = 100
-        let rectHeight:CGFloat = 100
+        let rectMargin:CGFloat = 10
+        let rectWidth:CGFloat = 250
+        let rectHeight:CGFloat = 270
+        let outCornerRadius:CGFloat = 5
+        let InCornerRadius:CGFloat = 3
+        let heightPercent:[CGFloat] = [0.25, 0.25, 0.25, 0.25]
         
-        // Find center of actual frame to set rectangle in middle
-        let xf:CGFloat = (self.frame.width  - rectWidth)  / 2
-        let yf:CGFloat = (self.frame.height - rectHeight) / 2
+        let outterRectX:CGFloat = (self.frame.width  - rectWidth)  / 2
+        let outterRectY:CGFloat = (self.frame.height - rectHeight) / 2
+        
+        let innerWidth = rectWidth - (rectMargin * 2)
+        let innerHeight = rectHeight - (rectMargin * 2)
+        
+        let rect0X:CGFloat = (self.frame.width - rectWidth) / 2  + rectMargin
+        let rect0Y:CGFloat = (self.frame.height - rectHeight) / 2  + rectMargin
+        
+        let rect1X:CGFloat = rect0X
+        let rect1Y:CGFloat = rect0Y + (innerHeight * heightPercent[0])
+        
+        let rect2X:CGFloat = rect0X
+        let rect2Y:CGFloat = rect1Y + (innerHeight * heightPercent[1])
+        
+        let rect3X:CGFloat = rect0X
+        let rect3Y:CGFloat = rect2Y + (innerHeight * heightPercent[2])
+
         
         let ctx: CGContext = UIGraphicsGetCurrentContext()!
         ctx.saveGState()
         
-        let rect = CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight)
-        let clipPath: CGPath = UIBezierPath(roundedRect: rect, cornerRadius: 2).cgPath
+        let outerRect = CGRect(x: outterRectX, y: outterRectY, width: rectWidth, height: rectHeight)
+        let clipPathOuter: CGPath = UIBezierPath(roundedRect: outerRect, cornerRadius: outCornerRadius).cgPath
+        ctx.addPath(clipPathOuter)
+        ctx.setFillColor(UIColor.white.cgColor)
+        ctx.fillPath()
         
-        ctx.addPath(clipPath)
-        ctx.setFillColor(UIColor.green.cgColor)
-
-        
-        let rect1 = CGRect(x: 40, y: 40, width: 40, height: 40)
-        let clipPath1: CGPath = UIBezierPath(roundedRect: rect1, cornerRadius: 2).cgPath
-        ctx.addPath(clipPath1)
-        ctx.setFillColor(UIColor.green.cgColor)
-
+        let rect0 = CGRect(x: rect0X, y: rect0Y, width: innerWidth, height: innerHeight * heightPercent[0])
+        let clipPath0: CGPath = UIBezierPath(roundedRect: rect0, cornerRadius: InCornerRadius).cgPath
+        ctx.addPath(clipPath0)
+        ctx.setFillColor(UIColor.red.cgColor)
         ctx.closePath()
         ctx.fillPath()
-        ctx.restoreGState()
+        
+        let rect1 = CGRect(x: rect1X, y: rect1Y, width: innerWidth, height: innerHeight * heightPercent[1])
+        let clipPath1: CGPath = UIBezierPath(roundedRect: rect1, cornerRadius: 0).cgPath
+        ctx.addPath(clipPath1)
+        ctx.setFillColor(UIColor.green.cgColor)
+        ctx.closePath()
+        ctx.fillPath()
+        
+        let rect2 = CGRect(x: rect2X, y: rect2Y, width: innerWidth, height: innerHeight * heightPercent[2])
+        let clipPath2: CGPath = UIBezierPath(roundedRect: rect2, cornerRadius: 0).cgPath
+        ctx.addPath(clipPath2)
+        ctx.setFillColor(UIColor.yellow.cgColor)
+        ctx.closePath()
+        ctx.fillPath()
+        
+        let rect3 = CGRect(x: rect3X, y: rect3Y, width: innerWidth, height: innerHeight * heightPercent[3])
+        let clipPath3: CGPath = UIBezierPath(roundedRect: rect3, cornerRadius: InCornerRadius).cgPath
+        ctx.addPath(clipPath3)
+        ctx.setFillColor(UIColor.blue.cgColor)
+        ctx.closePath()
+        ctx.fillPath()
     }
 }
