@@ -124,17 +124,26 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-QW-l8C">
                                                     <rect key="frame" x="0.0" y="4.5" width="62.5" height="30"/>
+                                                    <connections>
+                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="AgQ-oo-gRm"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me4-Qn-8g4">
                                                     <rect key="frame" x="62.5" y="4.5" width="62" height="30"/>
+                                                    <connections>
+                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="Ub5-ej-Ud2"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAW-6Z-d4p">
                                                     <rect key="frame" x="124.5" y="4.5" width="62.5" height="30"/>
+                                                    <connections>
+                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="SvN-3J-ULX"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-w6-IhN">
                                                     <rect key="frame" x="187" y="4.5" width="62" height="30"/>
                                                     <connections>
-                                                        <segue destination="S0I-Jg-kLL" kind="show" id="G00-Qw-7A5"/>
+                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="sNp-Hx-bsW"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -227,4 +236,7 @@
         <image name="more" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AgQ-oo-gRm"/>
+    </inferredMetricsTieBreakers>
 </document>

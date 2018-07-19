@@ -132,15 +132,21 @@ class ColorTableViewController: UITableViewController {
      */
     
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "showOneColor" {
-            let destCtr = segue.destination
-            if let oneColorCtr = destCtr as? ColorDetailViewController {
-                oneColorCtr.currentColor = colorList[2]
+        let c = self.tableView.indexPathForSelectedRow
+        print("\(c)")
+        if let segId = segue.identifier {
+            if segId == "showOneDetail" {
+                let destCtr = segue.destination
+                if let oneColorCtr = destCtr as? ColorDetailViewController,
+                    let colorIndex = tableView.indexPathForSelectedRow?.row
+                {
+                    oneColorCtr.currentColor = colorList[colorIndex]
+                }
             }
         }
     }
+
     
 }
