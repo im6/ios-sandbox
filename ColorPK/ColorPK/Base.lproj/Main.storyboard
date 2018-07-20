@@ -107,49 +107,40 @@
         <scene sceneID="Ejw-Ua-1jk">
             <objects>
                 <tableViewController id="eK2-Vo-Q4J" customClass="ColorTableViewController" customModule="ColorPK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="NaO-4D-Eeg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" id="NaO-4D-Eeg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="colorCell" rowHeight="55" id="GMC-Uh-pPg" customClass="ColorTableViewCell" customModule="ColorPK" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="colorCell" rowHeight="57" id="GMC-Uh-pPg" customClass="ColorTableViewCell" customModule="ColorPK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMC-Uh-pPg" id="njr-g0-str">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d98-cV-ycU">
-                                            <rect key="frame" x="18" y="8" width="249" height="38.5"/>
+                                            <rect key="frame" x="18" y="8" width="249" height="40.5"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-QW-l8C">
-                                                    <rect key="frame" x="0.0" y="4.5" width="62.5" height="30"/>
-                                                    <connections>
-                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="AgQ-oo-gRm"/>
-                                                    </connections>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-QW-l8C">
+                                                    <rect key="frame" x="0.0" y="5.5" width="62.5" height="30"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me4-Qn-8g4">
-                                                    <rect key="frame" x="62.5" y="4.5" width="62" height="30"/>
-                                                    <connections>
-                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="Ub5-ej-Ud2"/>
-                                                    </connections>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me4-Qn-8g4">
+                                                    <rect key="frame" x="62.5" y="5.5" width="62" height="30"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAW-6Z-d4p">
-                                                    <rect key="frame" x="124.5" y="4.5" width="62.5" height="30"/>
-                                                    <connections>
-                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="SvN-3J-ULX"/>
-                                                    </connections>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAW-6Z-d4p">
+                                                    <rect key="frame" x="124.5" y="5.5" width="62.5" height="30"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-w6-IhN">
-                                                    <rect key="frame" x="187" y="4.5" width="62" height="30"/>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-w6-IhN">
+                                                    <rect key="frame" x="187" y="5.5" width="62" height="30"/>
                                                     <connections>
-                                                        <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="sNp-Hx-bsW"/>
+                                                        <action selector="onColorBtnClick:" destination="GMC-Uh-pPg" eventType="touchUpInside" id="KUg-4e-dV8"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6w-kU-33J">
-                                            <rect key="frame" x="284" y="12" width="72" height="33"/>
+                                            <rect key="frame" x="295" y="12" width="72" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="❤️♡"/>
                                         </button>
@@ -167,6 +158,7 @@
                                     <outletCollection property="colorButtons" destination="me4-Qn-8g4" collectionClass="NSMutableArray" id="UXf-Q3-cLG"/>
                                     <outletCollection property="colorButtons" destination="iAW-6Z-d4p" collectionClass="NSMutableArray" id="Oj1-gl-e5L"/>
                                     <outletCollection property="colorButtons" destination="ssu-w6-IhN" collectionClass="NSMutableArray" id="ubJ-j4-jA1"/>
+                                    <segue destination="S0I-Jg-kLL" kind="show" identifier="showOneDetail" id="nce-ut-zpF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -236,7 +228,4 @@
         <image name="more" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="AgQ-oo-gRm"/>
-    </inferredMetricsTieBreakers>
 </document>

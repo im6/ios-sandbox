@@ -2,6 +2,12 @@ import UIKit
 
 class ColorCanvasView: UIView {
     override func draw(_ rect: CGRect) {
+        if let cellView = self.superview as? ColorDetailViewController{
+            let cellValues = cellView.color
+            print(cellView)
+            let a = 1
+        }
+        
         let rectMargin:CGFloat = 10
         let rectWidth:CGFloat = 250
         let rectHeight:CGFloat = 270
@@ -9,7 +15,7 @@ class ColorCanvasView: UIView {
         let InCornerRadius:CGFloat = 3
         let heightPercent:[CGFloat] = [0.25, 0.25, 0.25, 0.25]
         
-        let outterRectX:CGFloat = (self.frame.width  - rectWidth)  / 2
+        let outterRectX:CGFloat = (self.frame.width  - rectWidth) / 2
         let outterRectY:CGFloat = (self.frame.height - rectHeight) / 2
         
         let innerWidth = rectWidth - (rectMargin * 2)

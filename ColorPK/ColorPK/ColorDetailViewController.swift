@@ -3,7 +3,7 @@ import UIKit
 
 class ColorDetailViewController: UIViewController {
 
-    var currentColor: VPColor!
+    var color: VPColor!
     override func viewDidLoad() {
         
         super.viewDidLoad()

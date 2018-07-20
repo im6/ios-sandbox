@@ -4,6 +4,14 @@ class ColorTableViewCell: UITableViewCell {
 
     @IBOutlet var colorButtons: [UIButton]!
     @IBOutlet weak var likeButton: UIButton!
+    @IBAction func onColorBtnClick(_ sender: UIButton) {
+        if let onButtonTapped = self.onColorBarClick,
+            let selectedColor = color {
+            onButtonTapped(selectedColor)
+        }
+    }
+    
+    var onColorBarClick : ((VPColor) -> Void)? = nil
     
     var color: VPColor? {
         didSet {

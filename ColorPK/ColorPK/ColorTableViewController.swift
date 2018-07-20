@@ -3,7 +3,8 @@ import UIKit
 
 class ColorTableViewController: UITableViewController {
     
-    private var colorList = [VPColor]()
+    //private var colorList = [VPColor]()
+    private var colorList = VPColor.getDummyColorList()
     
     private func loadColors() {
         let backgroundQ = DispatchQueue.global(qos: .userInitiated)
@@ -63,6 +64,8 @@ class ColorTableViewController: UITableViewController {
         
         //tableView.estimatedRowHeight = tableView.rowHeight
         //tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.tableView.allowsSelection = true
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,11 +81,16 @@ class ColorTableViewController: UITableViewController {
         let color = colorList[indexPath.row]
         //cell.textLabel?.text = "id: \(color.id)"
         //cell.detailTextLabel?.text = "\(color.color)"
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         if let colorCell = cell as? ColorTableViewCell {
             colorCell.color = color
         }
         return cell
+    }
+    
+    override func tableView(_ UITableView: UITableView, didSelectRowAt: IndexPath) {
+        print("select row at: \(didSelectRowAt)")
     }
     
     
@@ -132,21 +140,19 @@ class ColorTableViewController: UITableViewController {
      */
     
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let c = self.tableView.indexPathForSelectedRow
-        print("\(c)")
         if let segId = segue.identifier {
             if segId == "showOneDetail" {
                 let destCtr = segue.destination
-                if let oneColorCtr = destCtr as? ColorDetailViewController,
-                    let colorIndex = tableView.indexPathForSelectedRow?.row
+                if let colorDetailCtr = destCtr as? ColorDetailViewController,
+                    let rowId = tableView.indexPathForSelectedRow?.row
                 {
-                    oneColorCtr.currentColor = colorList[colorIndex]
+                    print("sg id : \(rowId)")
+                    colorDetailCtr.color = colorList[rowId]
                 }
             }
         }
     }
 
-    
+
 }
