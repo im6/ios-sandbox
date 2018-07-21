@@ -89,9 +89,9 @@ class ColorTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ UITableView: UITableView, didSelectRowAt: IndexPath) {
-        print("select row at: \(didSelectRowAt)")
-    }
+//    override func tableView(_ UITableView: UITableView, didSelectRowAt: IndexPath) {
+//        //print("select row at: \(didSelectRowAt)")
+//    }
     
     
     /*
@@ -141,15 +141,14 @@ class ColorTableViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let segId = segue.identifier {
-            if segId == "showOneDetail" {
-                let destCtr = segue.destination
-                if let colorDetailCtr = destCtr as? ColorDetailViewController,
-                    let rowId = tableView.indexPathForSelectedRow?.row
-                {
-                    print("sg id : \(rowId)")
-                    colorDetailCtr.color = colorList[rowId]
-                }
+        if let segId = segue.identifier,
+            segId == "showOneDetail"
+        {
+            let destCtr = segue.destination
+            if let colorDetailCtr = destCtr as? ColorDetailViewController,
+                let rowId = tableView.indexPathForSelectedRow?.row
+            {
+                colorDetailCtr.color = colorList[rowId]
             }
         }
     }

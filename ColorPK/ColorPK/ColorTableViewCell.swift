@@ -20,7 +20,6 @@ class ColorTableViewCell: UITableViewCell {
     }
     
     private func updateUI() {
-        
         let convFn = Shared.sharedInstance.convertStringToColor
         
         if let currentColor = color {
@@ -32,10 +31,6 @@ class ColorTableViewCell: UITableViewCell {
             colorButtons[2].backgroundColor = convFn(currentColor.color[2])
             colorButtons[3].backgroundColor = convFn(currentColor.color[3])
         }
-        
-//        let bgColorView = UIView()
-//        bgColorView.backgroundColor = nil
-//        self.selectedBackgroundView = bgColorView
         
     }
 }
