@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMC-Uh-pPg" id="njr-g0-str">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d98-cV-ycU">
@@ -198,6 +198,9 @@
                             <constraint firstItem="q13-nI-9SL" firstAttribute="leading" secondItem="N5r-eX-xHo" secondAttribute="leadingMargin" constant="16" id="xOP-bN-DZV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorCanvas" destination="q13-nI-9SL" id="6BV-jO-pK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nma-y9-ATI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

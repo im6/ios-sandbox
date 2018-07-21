@@ -5,7 +5,7 @@ import UIKit
 class Shared {
     static let sharedInstance = Shared()
     
-    func convertStringToColor(str: String) -> UIColor? {
+    func convertStringToColor(str: String) -> UIColor {
         let slice0 = str[str.startIndex..<str.index(str.startIndex, offsetBy: 2)]
         let slice1 = str[str.index(str.startIndex, offsetBy: 2)..<str.index(str.startIndex, offsetBy: 4)]
         let slice2 = str[str.index(str.startIndex, offsetBy: 4)..<str.index(str.startIndex, offsetBy: 6)]
@@ -18,7 +18,7 @@ class Shared {
                                       alpha: 1)
             return colorResult
         } else {
-            return nil
+            return UIColor.black
         }
     }
     

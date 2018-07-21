@@ -1,13 +1,8 @@
 import UIKit
 
 class ColorCanvasView: UIView {
+    var colors: [CGColor]!
     override func draw(_ rect: CGRect) {
-        if let cellView = self.superview as? ColorDetailViewController{
-            let cellValues = cellView.color
-            print(cellView)
-            let a = 1
-        }
-        
         let rectMargin:CGFloat = 10
         let rectWidth:CGFloat = 250
         let rectHeight:CGFloat = 270
@@ -46,28 +41,28 @@ class ColorCanvasView: UIView {
         let rect0 = CGRect(x: rect0X, y: rect0Y, width: innerWidth, height: innerHeight * heightPercent[0])
         let clipPath0: CGPath = UIBezierPath(roundedRect: rect0, cornerRadius: InCornerRadius).cgPath
         ctx.addPath(clipPath0)
-        ctx.setFillColor(UIColor.red.cgColor)
+        ctx.setFillColor(colors[0])
         ctx.closePath()
         ctx.fillPath()
         
         let rect1 = CGRect(x: rect1X, y: rect1Y, width: innerWidth, height: innerHeight * heightPercent[1])
         let clipPath1: CGPath = UIBezierPath(roundedRect: rect1, cornerRadius: 0).cgPath
         ctx.addPath(clipPath1)
-        ctx.setFillColor(UIColor.green.cgColor)
+        ctx.setFillColor(colors[1])
         ctx.closePath()
         ctx.fillPath()
         
         let rect2 = CGRect(x: rect2X, y: rect2Y, width: innerWidth, height: innerHeight * heightPercent[2])
         let clipPath2: CGPath = UIBezierPath(roundedRect: rect2, cornerRadius: 0).cgPath
         ctx.addPath(clipPath2)
-        ctx.setFillColor(UIColor.yellow.cgColor)
+        ctx.setFillColor(colors[2])
         ctx.closePath()
         ctx.fillPath()
         
         let rect3 = CGRect(x: rect3X, y: rect3Y, width: innerWidth, height: innerHeight * heightPercent[3])
         let clipPath3: CGPath = UIBezierPath(roundedRect: rect3, cornerRadius: InCornerRadius).cgPath
         ctx.addPath(clipPath3)
-        ctx.setFillColor(UIColor.blue.cgColor)
+        ctx.setFillColor(colors[3])
         ctx.closePath()
         ctx.fillPath()
     }
