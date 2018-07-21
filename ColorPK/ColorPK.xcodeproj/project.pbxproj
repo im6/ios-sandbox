@@ -16,6 +16,7 @@
 		387EDBD020DD5AE100ADF318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387EDBCF20DD5AE100ADF318 /* Assets.xcassets */; };
 		387EDBD320DD5AE100ADF318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387EDBD120DD5AE100ADF318 /* LaunchScreen.storyboard */; };
 		387EDBDB20DD5B2C00ADF318 /* VPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EDBDA20DD5B2C00ADF318 /* VPColor.swift */; };
+		38B4F12E2102F8BD001F0607 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4F12D2102F8BD001F0607 /* Shared.swift */; };
 		38E25EC520FCD6F600D4944F /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E25EC420FCD6F600D4944F /* ColorDetailViewController.swift */; };
 		38E25EC720FCD80F00D4944F /* ColorCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E25EC620FCD80F00D4944F /* ColorCanvasView.swift */; };
 		38E6D18E20ED006100A254E0 /* ColorPK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E6D18D20ED006100A254E0 /* ColorPK.swift */; };
@@ -33,6 +34,7 @@
 		387EDBD220DD5AE100ADF318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		387EDBD420DD5AE100ADF318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387EDBDA20DD5B2C00ADF318 /* VPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPColor.swift; sourceTree = "<group>"; };
+		38B4F12D2102F8BD001F0607 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		38E25EC420FCD6F600D4944F /* ColorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
 		38E25EC620FCD80F00D4944F /* ColorCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCanvasView.swift; sourceTree = "<group>"; };
 		38E6D18D20ED006100A254E0 /* ColorPK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPK.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				38E25EC620FCD80F00D4944F /* ColorCanvasView.swift */,
 				386889D120F8DDD700249E22 /* ColorTableViewController.swift */,
 				386889D320F8DE7200249E22 /* ColorTableViewCell.swift */,
+				38B4F12D2102F8BD001F0607 /* Shared.swift */,
 			);
 			path = ColorPK;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B4F12E2102F8BD001F0607 /* Shared.swift in Sources */,
 				38E25EC520FCD6F600D4944F /* ColorDetailViewController.swift in Sources */,
 				387EDBDB20DD5B2C00ADF318 /* VPColor.swift in Sources */,
 				387EDBC720DD5AE100ADF318 /* AppDelegate.swift in Sources */,
