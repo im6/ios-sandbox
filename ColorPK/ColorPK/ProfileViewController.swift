@@ -1,10 +1,3 @@
-//
-//  SettingViewController.swift
-//  ColorPK
-//
-//  Created by Zijian Guo on 7/1/18.
-//  Copyright © 2018 Zijian Guo. All rights reserved.
-//
 
 import UIKit
 
