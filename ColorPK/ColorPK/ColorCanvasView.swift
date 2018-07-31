@@ -4,10 +4,10 @@ class ColorCanvasView: UIView {
     var colors: [CGColor]!
     override func draw(_ rect: CGRect) {
         let rectMargin:CGFloat = 10
-        let rectWidth:CGFloat = 250
-        let rectHeight:CGFloat = 270
+        let rectWidth:CGFloat = frame.width
+        let rectHeight:CGFloat = frame.height
         let outCornerRadius:CGFloat = 5
-        let InCornerRadius:CGFloat = 3
+        let inCornerRadius:CGFloat = 4
         let heightPercent:[CGFloat] = [0.25, 0.25, 0.25, 0.25]
         
         let outterRectX:CGFloat = (self.frame.width  - rectWidth) / 2
@@ -38,7 +38,7 @@ class ColorCanvasView: UIView {
         ctx.fillPath()
         
         let rect0 = CGRect(x: rect0X, y: rect0Y, width: innerWidth, height: innerHeight * heightPercent[0])
-        let clipPath0: CGPath = UIBezierPath(roundedRect: rect0, cornerRadius: InCornerRadius).cgPath
+        let clipPath0: CGPath = UIBezierPath(roundedRect: rect0, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: inCornerRadius, height: inCornerRadius)).cgPath
         ctx.addPath(clipPath0)
         ctx.setFillColor(colors[0])
         ctx.fillPath()
@@ -56,7 +56,7 @@ class ColorCanvasView: UIView {
         ctx.fillPath()
         
         let rect3 = CGRect(x: rect3X, y: rect3Y, width: innerWidth, height: innerHeight * heightPercent[3])
-        let clipPath3: CGPath = UIBezierPath(roundedRect: rect3, cornerRadius: InCornerRadius).cgPath
+        let clipPath3: CGPath = UIBezierPath(roundedRect: rect3, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: inCornerRadius, height: inCornerRadius)).cgPath
         ctx.addPath(clipPath3)
         ctx.setFillColor(colors[3])
         ctx.fillPath()

@@ -12,7 +12,6 @@ class ColorTableViewCell: UITableViewCell {
     }
     
     var onColorBarClick : ((VPColor) -> Void)? = nil
-    
     var color: VPColor? {
         didSet {
             updateUI()
@@ -21,7 +20,6 @@ class ColorTableViewCell: UITableViewCell {
     
     private func updateUI() {
         let convFn = Shared.sharedInstance.convertStringToColor
-        
         if let currentColor = color {
             let btnHeart = currentColor.isLiked ? "♥️" : "♡"
             let btnText = "\(btnHeart) \(currentColor.likeNum)"

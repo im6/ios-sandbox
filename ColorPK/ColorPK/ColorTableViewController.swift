@@ -139,7 +139,6 @@ class ColorTableViewController: UITableViewController {
      }
      */
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let segId = segue.identifier,
             segId == "showOneDetail"
