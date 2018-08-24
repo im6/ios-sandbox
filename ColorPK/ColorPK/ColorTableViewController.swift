@@ -9,7 +9,7 @@ class ColorTableViewController: UITableViewController {
     private func loadColors() {
         let backgroundQ = DispatchQueue.global(qos: .userInitiated)
         //colorList = VPColor.getDummyColorList()
-        backgroundQ.async { [weak self] in
+        backgroundQ.async { [weak weakSelf = self] in
             let json: [String: Any] = ["_csrf": "uNmjCwXz-ztEL6Anx7zjSUuRq2R21oDGoJDA"]
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
             let url = URL(string: "http://localhost:3000/api/initColorList")!
@@ -40,9 +40,9 @@ class ColorTableViewController: UITableViewController {
                                                        color: newColor as! String,
                                                        isLiked: (newIsLiked as! Int) == 1,
                                                        likeNum: newLikeNum as! Int)
-                                self?.colorList.append(newColor)
+                                weakSelf?.colorList.append(newColor)
                                 DispatchQueue.main.async {
-                                    self?.tableView?.reloadData()
+                                    weakSelf?.tableView?.reloadData()
                                 }
                             } else {
                                 print("error parsing colors json response.")

@@ -6,6 +6,7 @@ class ColorDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        colorCanvas.addGestureRecognizer(UITapGestureRecognizer(target: self , action: #selector(switchColor(_:))))
     }
     
     private func updateUI() {
@@ -16,6 +17,15 @@ class ColorDetailViewController: UIViewController {
             convFn(color.color[2]).cgColor,
             convFn(color.color[3]).cgColor,
         ]
+    }
+    
+    @objc func switchColor(_ recognizer: UITapGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            print(234)
+        default:
+            print("default")
+        }
     }
 
 }
